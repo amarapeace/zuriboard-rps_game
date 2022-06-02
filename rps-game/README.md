@@ -7,4 +7,4 @@ P stands for Paper
 Here, the game is between a user and the computer
 Rock wins Scissors
 Paper wins Rock and
-Scissors wins Paper.
+Scissors wins Paper
