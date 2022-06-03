@@ -12,7 +12,7 @@ while exit == False:
             print('Player(Rock):CPU(Rock)')
             print('A tie')
             exit = False   #Try again
-         elif computer_input =='S':
+        elif computer_input =='S':
             print('Player(Rock):CPU(Scissors)')
             print('Player wins')
             exit = True    
