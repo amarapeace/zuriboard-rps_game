@@ -1,40 +1,57 @@
 from random import choice
+exit = False
 
-choices=['R','P','S']
-user_input=input('Choose R for Rock, P for Paper or S for Scissors: ')
-computer_input=(choice(choices))
+while exit == False:
+    choices=['R','P','S']
+    user_input=input('Choose either R for Rock, P for Paper or S for Scissors: ')
+    computer_input=(choice(choices))
 
-if user_input == 'R':
-    if computer_input == 'R':
-        print('You chose R and computer chose R too')
-        print('A tie')
-    elif computer_input =='S':
-        print('You chose R and computer chose S')
-        print('User wins')
-    elif computer_input =='P':
-        print('You chose R and computer chose P')
-        print('Computer wins')
-elif user_input == 'P':
-    if computer_input == 'P':
-        print('You chose P and computer chose P too')
-        print('A tie')
-    elif computer_input =='S':
-        print('You chose P and computer chose S')
-        print('User wins')
-    elif computer_input =='R':
-        print('You chose P and computer chose R')
-        print('Computer wins')
-elif user_input == 'S':
-    if computer_input == 'S':
-        print('You chose S and computer chose S too')
-        print('A tie')
-    elif computer_input =='P':
-        print('You chose S and computer chose P')
-        print('User wins')
-    elif computer_input =='R':
-        print('You chose S and computer chose R')
-        print('Computer wins')
-else:
-    print('Invalid entry')
+
+    if user_input == 'R':
+        if computer_input == 'R':
+            print('Player(Rock):CPU(Rock)')
+            print('A tie')
+            exit = False   #Try again
+         elif computer_input =='S':
+            print('Player(Rock):CPU(Scissors)')
+            print('Player wins')
+            exit = True    
+        elif computer_input =='P':
+            print('Player(Rock):CPU(Paper)')
+            print('CPU wins')
+            exit = True
+                
+    elif user_input == 'P':
+        if computer_input == 'P':
+            print('Player(Paper):CPU(Paper)')
+            print('A tie')
+            exit = False   #Try again
+        elif computer_input == 'R':
+            print('Player(Paper):CPU(Rock)')
+            print('Player wins')
+            exit = True    
+        elif computer_input =='S':
+            print('Player(Paper):CPU(Scissors)')
+            print('CPU wins')
+            exit = True
+
+    elif user_input == 'S':
+        if computer_input == 'S':
+            print('Player(Scissors):CPU(Scissors)')
+            print('A tie')
+            exit = False    #Try again
+        elif computer_input =='P':
+            print('Player(Scissors):CPU(Paper)')
+            print('Player wins')
+            exit = True
+        elif computer_input =='R':
+            print('Player(Scissors):CPU(Rock)')
+            print('CPU wins')
+            exit = True    
+
+    else:
+        print('Invalid entry')
+        exit = False    #Try again
+
 
     
